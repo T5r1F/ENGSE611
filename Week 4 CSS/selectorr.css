@@ -1,0 +1,26 @@
+
+        p { 
+            color: green;
+        }
+
+        .highlight {
+            background: yellow;
+        }
+        #header {
+            background: blue;
+            color: white;
+            padding: 10px;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: normal;
+            font-variant: normal;
+            font-stretch: quarter-width;
+            font-size-adjust: none;
+            font-kerning: auto;
+            font-synthesis: weight style;
+            font-variant-alternates: normal;
+            font-variant-caps: normal;
+        }
