@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number & Math Demo</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 30px;
+        }
+
+        button {
+            background: #19b5fe;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 18px;
+        }
+
+        #outputBox {
+            margin-top: 15px;
+            background: black;
+            color: white;
+            padding: 20px;
+            border-left: 5px solid #00cc66;
+            border-radius: 10px;
+            white-space: pre-wrap;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+
+    <button onclick="runDemo()">Run Code</button>
+
+    <pre id="outputBox">ผลลัพธ์จะแสดงที่นี่...</pre>
+
+    <script>
+        function runDemo() {
+
+            console.clear();
+            const output = [];
+
+            let a = 10;
+            let b = 3;
+
+            output.push("a + b = " + (a + b));
+            console.log("a + b =", a + b);
+
+            output.push("a % b = " + (a % b));
+            console.log("a % b =", a % b);
+
+            output.push("a ** b = " + (a ** b));
+            console.log("a ** b =", a ** b);
+
+            // Math Object
+            output.push("ปัดเศษ 3.7: " + Math.round(3.7));
+            console.log("ปัดเศษ 3.7:", Math.round(3.7));
+
+            output.push("ปัดลง 3.7: " + Math.floor(3.7));
+            console.log("ปัดลง 3.7:", Math.floor(3.7));
+
+            output.push("ปัดขึ้น 3.2: " + Math.ceil(3.2));
+            console.log("ปัดขึ้น 3.2:", Math.ceil(3.2));
+
+            let rand = Math.random();
+            output.push("สุ่ม 0-1: " + rand);
+            console.log("สุ่ม 0-1:", rand);
+
+            // ลูกเต๋า
+            let dice = Math.floor(Math.random() * 6) + 1;
+            output.push("ทอยลูกเต๋าได้: " + dice);
+            console.log("ทอยลูกเต๋าได้:", dice);
+
+            // แสดงผลบนหน้าเว็บ
+            document.getElementById("outputBox").textContent =
+                output.join("\n");
+        }
+    </script>
+
+</body>
+</html>

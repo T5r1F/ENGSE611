@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multi For Loop</title>
+
+</head>
+<body>
+
+    <h3>ผลลัพธ์บนหน้าเว็บ:</h3>
+
+    <div class="box">
+        <div id="output">กำลังรัน...</div>
+    </div>
+
+    <p>
+        <strong>หมายเหตุ:</strong> ผลลัพธ์จะแสดงใน <span style="color:red;">Console จริง</span> ด้วย
+    </p>
+
+    <script>
+
+        let output = "";
+
+        for (let i = 0, j = 100; i != j; i += 5, j -= 5) {
+
+            output += `i = ${i}, j = ${j}\n`;
+
+            console.log("i = %d, j = %d", i, j);
+        }
+
+        output += "Loop ended";
+
+        console.log("Loop ended");
+
+        document.getElementById("output").textContent = output;
+
+    </script>
+
+</body>
+</html>
