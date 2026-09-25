@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ตรวจสอบคะแนน</title>
+
+    <style>
+
+        body{
+            font-family: Arial, sans-serif;
+        }
+
+        button{
+            background-color: rgb(65, 185, 255);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        #output{
+            background-color: #000;
+            color: white;
+            width: 250px;
+            margin-top: 10px;
+            padding: 15px;
+            border-radius: 10px;
+            border-left: 4px solid rgb(65, 185, 255);
+            font-size: 22px;
+        }
+
+    </style>
+</head>
+
+<body>
+    <h2>ตรวจสอบคะแนน</h2>
+
+    <button onclick="runDemo()">Run Code</button>
+    <div id="output">ผลลัพธ์จะปรากฏที่นี่...</div>
+    <script>
+        function runDemo() {
+            const output = [];
+
+            let คะแนนที่สุ่มได้ = 88;
+            
+
+            if (คะแนนที่สุ่มได้ >= 80) {
+                เกรด = "A";
+            }
+            else if (คะแนนที่สุ่มได้ >= 70) {
+                เกรด = "B";
+            }
+            else if (คะแนนที่สุ่มได้ >= 60) {
+                เกรด = "C";
+            }
+            else if (คะแนนที่สุ่มได้ >= 50) {
+                เกรด = "D";
+            }
+            else {
+                เกรด = "F";
+            }
+
+            if (คะแนนที่สุ่มได้ >= 50) {
+                ผลสอบ = "ผ่าน";
+            } else {
+                ผลสอบ = "ไม่ผ่าน";
+            }
+
+            switch (เกรด) {
+
+            case "A":
+                คำอธิบาย = "ยอดเยี่ยมมาก";
+                break;
+
+            case "B":
+                คำอธิบาย = "ดีมาก รักษามาตรฐานไว้";
+                break;
+
+            case "C":
+                คำอธิบาย = "ผ่านเกณฑ์ระดับดี";
+                break;
+
+            case "D":
+                คำอธิบาย = "พอใช้ แต่ควรพัฒนาเพิ่ม";
+                break;
+
+            case "F":
+                คำอธิบาย = "ต้องลงทะเบียนเรียนใหม่";
+                break;
+
+            default:
+                คำอธิบาย = "ไม่พบข้อมูล";
+        }
+            
+            output.push(`คะแนนที่สุ่มได้: ${คะแนนที่สุ่มได้}`);
+            console.log("คะแนนที่สุ่มได้:", คะแนนที่สุ่มได้);
+            output.push(`เกรด: ${เกรด}`);
+            console.log("เกรด:", เกรด);
+            output.push(`ผลสอบ: ${ผลสอบ}`);
+            console.log("ผลสอบ:", ผลสอบ);
+            output.push(`คำอธิบาย: ${คำอธิบาย}`);
+            console.log("คำอธิบาย:", คำอธิบาย);
+
+            document.getElementById("output").innerHTML =
+            `คะแนนที่สุ่มได้: ${คะแนนที่สุ่มได้}<br>
+            เกรด: ${เกรด}<br>
+            ผลสอบ: ${ผลสอบ}<br>
+            คำอธิบาย: ${คำอธิบาย}`;
+        }
+    </script>
+</body>
+</html>
