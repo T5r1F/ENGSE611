@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sayHi</title>
+
+        <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        button {
+            background-color: #00a8e8;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        #outputBox {
+            margin-top: 15px;
+            padding: 15px;
+            background-color: black;
+            color: white;
+            border-left: 5px solid limegreen;
+            border-radius: 5px;
+            white-space: pre-wrap;
+        }
+        </style>
+</head>
+<body>
+
+    <button onclick="runDemo()">Run Code</button>
+
+    <div id="outputBox"></div>
+
+    <script>
+        function runDemo(){
+            const output = [];
+
+            function sayHi() {
+                output.push("Hi");
+                console.log("Hi");
+            }
+            sayHi();
+            const sayHiArrow = () => {
+                output.push("Hi form Arrow");
+                console.log("Hi from Arrow");
+            };
+            sayHiArrow();
+            function greet(name) {
+                output.push("Hello " + name);
+                console.log("Hello " + name);
+            }
+            greet("Alex");
+            function add(a,b) {
+                return a + b;
+            }
+            let sum = add(5, 7);
+            output.push("ผลรวม 5 + 7 = " + sum);
+            console.log("ผลรวม:", sum);
+
+            document.getElementById("outputBox").textContent = output.join("\n");
+        }
+    </script>
+</body>
+</html>
